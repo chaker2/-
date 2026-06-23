@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>دبلومة صناعة الطفل القرآني — بالوحي نحيا</title>
+<meta name="description" content="النسخة الإلكترونية لدبلومة صناعة الطفل القرآني من معهد العلم والعمل (بالوحي نحيا) — محاضرات، مقررات، مستندات، صوتيات وموارد." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="brand" onclick="showPage('home')">
+      <span class="brand-mark">ﷺ</span>
+      <span class="brand-text">
+        <strong>دبلومة صناعة الطفل القرآني</strong>
+        <small>معهد العلم والعمل — بالوحي نحيا</small>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="القائمة" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
+    <nav class="main-nav">
+      <a href="#home"      onclick="showPage('home')">الرئيسية</a>
+      <a href="#courses"   onclick="showPage('courses')">المقررات</a>
+      <a href="#videos"    onclick="showPage('videos')">الفيديوهات</a>
+      <a href="#documents" onclick="showPage('documents')">المستندات</a>
+      <a href="#audio"     onclick="showPage('audio')">الصوتيات</a>
+      <a href="#resources" onclick="showPage('resources')">الموارد</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ============ HOME ============ -->
+<section id="home" class="page active">
+  <div class="hero">
+    <h1>دبلومة صناعة الطفل القرآني</h1>
+    <p class="lead">دورة تدريبية <strong>مجانية</strong> لمساعدة الآباء والأمهات والمعلمين والمعلمات على صناعة الأطفال صناعة قرآنية، والارتقاء بمستوى التعليم القرآني للأطفال.</p>
+    <p class="sub">مدة الدبلومة <strong>ثلاثة أشهر</strong> بواقع <strong>٧ ساعات أسبوعياً</strong>، تجمع بين التأهيل المفاهيمي التأصيلي والمهاري التطبيقي.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#courses" onclick="showPage('courses')">ابدأ المقررات</a>
+      <a class="btn ghost"   href="#videos"  onclick="showPage('videos')">شاهد المحاضرات</a>
+    </div>
+  </div>
+
+  <div class="grid features">
+    <div class="card feature"><h3>ختمة الفهم</h3><p>تفهيم الأطفال الآيات من خلال كتب التفسير.</p></div>
+    <div class="card feature"><h3>ختمة الوصايا</h3><p>تعريفهم بأبرز ما ينبغي عليهم فعله.</p></div>
+    <div class="card feature"><h3>ختمة المحبة</h3><p>تعريفهم بالله من خلال الآيات.</p></div>
+    <div class="card feature"><h3>الحفظ بالتجويد</h3><p>تحفيظهم مباني الآيات بالتجويد الصحيح.</p></div>
+  </div>
+
+  <div class="card info-block">
+    <h2>محاور التأهيل</h2>
+    <ul>
+      <li><strong>المحور الأول — الصلاح (للنفس):</strong> فهم جزء عمّ وتصحيح التلاوة.</li>
+      <li><strong>المحور الثاني — الإصلاح (للغير):</strong> تسديد النية، إبراز الأهمية، طرائق التدريس.</li>
+      <li><strong>المحور الثالث — التأهيل المهاري:</strong> سمات المعلم والمتعلم، البيئة التعليمية، القياس والتقويم.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section id="courses" class="page">
+  <h1 class="page-title">المقررات الأسبوعية</h1>
+  <p class="page-sub">جدول سير الدبلومة على مدى ٢٤ أسبوعاً، مقسّم على أربعة محاور.</p>
+
+  <div class="legend">
+    <span class="tag t1">مدارسات وورش</span>
+    <span class="tag t2">محاضرات مرئية</span>
+    <span class="tag t3">ختمات دراية</span>
+    <span class="tag t4">مقالات بالوحي نحيا</span>
+  </div>
+
+  <div id="weeks-list" class="weeks-list"></div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section id="videos" class="page">
+  <h1 class="page-title">المحاضرات المرئية</h1>
+  <p class="page-sub">قوائم تشغيل ومحاضرات على قناة "بالوحي نحيا" على يوتيوب.</p>
+
+  <h2 class="section-title">قوائم التشغيل</h2>
+  <div id="playlists" class="grid"></div>
+
+  <h2 class="section-title">محاضرات مفردة</h2>
+  <div id="videos-list" class="grid videos-grid"></div>
+</section>
+
+<!-- ============ DOCUMENTS ============ -->
+<section id="documents" class="page">
+  <h1 class="page-title">المستندات</h1>
+  <p class="page-sub">دليل الدارسين وجدول السير، متاحة للمعاينة والتحميل.</p>
+  <div class="grid">
+    <div class="card doc-card">
+      <h3>دليل الدارسين</h3>
+      <p>المرشد الشامل للدبلومة: التعريف، الأهداف، المراحل، اللائحة والخطة التعليمية.</p>
+      <div class="actions">
+        <a class="btn primary" href="documents/manual.pdf" target="_blank">معاينة</a>
+        <a class="btn ghost"   href="documents/manual.pdf" download>تحميل PDF</a>
+      </div>
+    </div>
+    <div class="card doc-card">
+      <h3>جدول سير الدبلومة</h3>
+      <p>الخطة الأسبوعية التفصيلية للمحاور الأربعة على مدار ٢٤ أسبوعاً.</p>
+      <div class="actions">
+        <a class="btn primary" href="documents/program.pdf" target="_blank">معاينة</a>
+        <a class="btn ghost"   href="documents/program.pdf" download>تحميل PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">ملفات إضافية على Google Drive</h2>
+  <div id="drive-list" class="grid"></div>
+</section>
+
+<!-- ============ AUDIO ============ -->
+<section id="audio" class="page">
+  <h1 class="page-title">الصوتيات</h1>
+  <p class="page-sub">مقاطع صوتية على حساب "بالوحي نحيا" على SoundCloud.</p>
+  <div id="audio-list" class="grid"></div>
+</section>
+
+<!-- ============ RESOURCES ============ -->
+<section id="resources" class="page">
+  <h1 class="page-title">الموارد والاستمارات</h1>
+  <p class="page-sub">استمارات Google Forms للتقييم والمتابعة، وروابط خارجية للتواصل.</p>
+
+  <h2 class="section-title">استمارات الدبلومة</h2>
+  <div id="forms-list" class="grid forms-grid"></div>
+
+  <h2 class="section-title">قنوات التواصل</h2>
+  <div class="card info-block">
+    <ul class="contact">
+      <li>📱 واتساب: <strong>00201114116760</strong></li>
+      <li>✈️ تليجرام: قناة <strong>بالوحي نحيا</strong> — د. شريف طه يونس</li>
+      <li>✈️ تليجرام (خاص): <strong>صناعة الطفل القرآني</strong></li>
+      <li>📘 فيسبوك: <strong>بالوحي نحيا</strong></li>
+      <li>🎧 ساوند كلاود: <strong>بالوحي نحيا</strong></li>
+      <li>▶️ يوتيوب: <strong>بالوحي نحيا — الصفحة الرسمية</strong></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© ٢٠١٩ معهد العلم والعمل — جميع حقوق الطبع محفوظة.</p>
+    <p class="muted">نسخة إلكترونية مبسطة من تطبيق الدبلومة.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
